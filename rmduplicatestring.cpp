@@ -3,7 +3,7 @@
 using namespace std;
 
 string rmdup(string s){
-    if(s.length == 0){
+    if(s.length() == 0){
         return "";
     }
     char ch = s[0];
@@ -15,6 +15,6 @@ string rmdup(string s){
     return (ch+ans);
 }
 int main(){
-    rmdupl();
+    cout<<rmdup("abhhfrrrrtttaaadfff");
     return 0;
 }

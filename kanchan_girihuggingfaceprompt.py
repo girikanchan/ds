@@ -32,7 +32,7 @@ for score, label, box in zip(results["scores"], results["labels"], results["boxe
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
 response = openai.Completion.create(
   model="text-davinci-003",

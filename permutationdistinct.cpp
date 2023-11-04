@@ -6,7 +6,6 @@ using namespace std;
 
 // distinct integer means their will no repaeting values in integer.
 int main(){
-
-    
+        
     return 0;
 }

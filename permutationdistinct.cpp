@@ -1,11 +1,37 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
 
+vector<vector<int> > ans;
 
-// permutation of distinct integer
+void permute(vector<int> &a, int idx) {
+    if (idx == a.size()) {
+        ans.push_back(a);
+        return;
+    }
+    for (int i = idx; i < a.size(); i++) {
+        swap(a[i], a[idx]);
+        permute(a, idx + 1);
+        swap(a[i], a[idx]);
+    }
+}
 
-// distinct integer means their will no repaeting values in integer.
-int main(){
-        
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> a(n);
+    for (auto &i : a)
+        cin >> i;
+
+    permute(a, 0);
+
+    for (auto v : ans) {
+        for (auto i : v) {
+            cout << i << " ";
+        }
+        cout << "\n";
+    }
+
     return 0;
 }

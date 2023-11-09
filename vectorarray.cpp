@@ -21,5 +21,9 @@ int main(){
         cout<<element<<endl;
     }
 
+    v.pop_back();
+
+    vector<int> v2(3,50);
+    // 50 50 50
     return 0;
 }
